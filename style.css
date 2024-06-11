@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+    --primary-color: #ff7043;
+    --secondary-color: #d95f1b;
+    --background-color: #f4f6f7;
+    --text-color: #333;
+    --white-color: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-radius: 10px;
+    --font-family: 'Roboto', Arial, sans-serif;
+}
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.quiz-container, .pronunciation-container {
+    background: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+.answers button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.answers button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+button {
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .quiz-container, .pronunciation-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

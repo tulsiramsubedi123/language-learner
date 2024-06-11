@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Language Learning App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>French Language Learning App</h1>
+    </header>
+    <main>
+        <section class="quiz-container">
+            <h2 id="question">Quiz Question</h2>
+            <div id="answers" class="answers"></div>
+        </section>
+        <section class="pronunciation-container">
+            <h2>Pronunciation Guide</h2>
+            <div id="word" class="word"></div>
+            <audio id="audio" controls class="audio"></audio>
+            <button id="pronounce" class="button" onclick="fetchPronunciation()">Get Pronunciation</button>
+            <p id="translation" class="translation"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Language Learning App</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
